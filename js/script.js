@@ -3,17 +3,21 @@ const cards = document.querySelectorAll('.card');
 const cityInput = document.getElementById('cityInput');
 const submitButton = document.getElementById('submitButton');
 const modalOverlay = document.querySelector('.modal-overlay')
+const  = documentcard1.getElementById('card1');
 const apiKey = `5c33e02d2f956b33f9e47edc7424cf4c`;
 const pexelApiKey = '563492ad6f917000010000015b1b377af3ac48368c8dbfb885947855';
 let cityID;
+// let picClic
 
-cards.forEach((card) => {
-    card.addEventListener('click', () => {
-        console.log('click');
-    });
-});
+ card1.addEventListener('click', function () {
+      const userClick = document.getElementById('card1');
+        // getQuote(picClic);
+        });
 
-submitButton.addEventListener('click', function (e) {
+
+
+
+        submitButton.addEventListener('click', function (e) {
     e.preventDefault();
     modalOverlay.classList.toggle('open');
     getCityId(cityInput.value).then(cityID => {
