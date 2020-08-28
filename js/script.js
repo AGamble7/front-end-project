@@ -11,43 +11,53 @@ const cards = document.querySelectorAll('.card'),
     card5 = document.getElementById('card5'),
     card6 = document.getElementById('card6'),
     restaurantOverlay = document.querySelector('.restaurant-overlay'),
+    closeModal = document.getElementById('close-modal'),
     apiKey = `5c33e02d2f956b33f9e47edc7424cf4c`;
 let cityID;
 let cuisine;
 
 card1.addEventListener('click', function () {
     const userClick = document.getElementById('card1');
-    restaurantOverlay.classList.toggle('open');
     const cuisine = 168; // cuisine ID for burgers
+    restaurantOverlay.classList.toggle('open');
     getEstablishmentsByCity(cityID, cuisine);
 });
 
 card2.addEventListener('click', function () {
     const userClick = document.getElementById('card2');
+    restaurantOverlay.classList.toggle('open');
     const cuisine = 82; // cuisine ID for pizza
+    restaurantOverlay.classList.toggle('open');
     getEstablishmentsByCity(cityID, cuisine);
 });
 
 card3.addEventListener('click', function () {
     const userClick = document.getElementById('card3');
+    restaurantOverlay.classList.toggle('open');
     const cuisine = 83; // cuisine ID for seafood
+    restaurantOverlay.classList.toggle('open');
     getEstablishmentsByCity(cityID, cuisine);
 });
 
 card4.addEventListener('click', function () {
     const userClick = document.getElementById('card4');
+    restaurantOverlay.classList.toggle('open');
     const cuisine = 193; // cuisine ID for bbq
+    restaurantOverlay.classList.toggle('open');
     getEstablishmentsByCity(cityID, cuisine);
 });
 
 card5.addEventListener('click', function () {
     const userClick = document.getElementById('card5');
+    restaurantOverlay.classList.toggle('open');
     const cuisine = 55; // cuisine ID for italian
+    restaurantOverlay.classList.toggle('open');
     getEstablishmentsByCity(cityID, cuisine);
 });
 
 card6.addEventListener('click', function () {
     const userClick = document.getElementById('card6');
+    restaurantOverlay.classList.toggle('open');
     getRandomCuisineByCity(cityID);
 });
 
@@ -58,6 +68,11 @@ submitButton.addEventListener('click', function (e) {
     getCityId(cityInput.value).then(aCityID => {
         cityID = aCityID;
     });
+});
+
+
+closeModal.addEventListener('click', function () {
+    restaurantOverlay.classList.toggle('open');
 });
 
 function getCityId(city) {
@@ -84,13 +99,14 @@ function getCityId(city) {
     return fetchVar;
 };
 
-function randomNumber(min, max) {  
+
+function randomNumber(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
-}  
+}
 
 function getRandomCuisineByCity(cityID) {
     let url = `https://developers.zomato.com/api/v2.1/cuisines?city_id=${cityID}`;
-    
+
     fetch(url, {
         headers: {
             'user-key': apiKey,
@@ -163,10 +179,12 @@ function getEstablishmentsByCity(cityID, cuisine) {
                 restaurantContainer.appendChild(p);
                 restaurantContainer.appendChild(timings);
                 restaurantContainer.appendChild(a);
-
+                
+                
             });
         });
 }
+
 
 
 
