@@ -5,30 +5,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Front-End-Project</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.css"> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div class="jumbotron">
-        <h1 class="display-4"><strong>Good Eats!</strong></h1>
-        <p class="lead"><i>Welcome to Good Eats!</i></p>
-        <p>Where you are able to pick the food you want based off of your location
-            from resturants in your local area.</p>
-        <p>Start by typing in your city and enjoy your Good Eats!</p>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+        <div class="carousel-item active">
+      <img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="First slide">
     </div>
+
+    <div class="carousel-item">
+      <img class="d-block w-90" src="https://images.unsplash.com/photo-1486485764572-92b96f21882a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-90" src="https://images.unsplash.com/photo-1584473457493-17c4c24290c9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div> 
+<div class="carousel-heading">
+        <h1 class="display-4">Good Eats!</h1>
+        <p>Welcome to Good Eats! where you are able to pick the food you want based off of your location
+            and pictures from resturants in your local area. Start by typing in your city and enjoy your Good Eats!</p>
+</div>
     <div class="modal-overlay">
         <div class="modal-content">
             <form>
-                Hungry! What to eat?
+                Where are you hungry?
                 <input type="text" id="cityInput" placeholder="Enter City" />
                 <button id="submitButton">Submit</button>
             </form>
         </div>
     </div>
 
-    <h2 class="header" "header-container">Choose a cuisine to see restaurants in: <strong><span id="currentCity"></span></strong> </h2>
+    <h2 class="header">Choose a cuisine to see restaurants in <span id="currentCity"> </span> </h2>
 
     <div class="card-container">
         <div class="card" id="card1">
@@ -42,11 +68,10 @@
                 <a>America Food</a>
            </div>
         </div>
-        // asdfjkhewuhgurakjghrijakbfjkwMoreNonSensefjanjfwejonvw
-         // this opens the modal
+        
                 <div class="modal-overlay1">
                     <div class="modal-content1">
-        // the actual modal
+    
                         <div id="myModal1" class="modal1">
         // the content within the modal
                             <div class="modal-content1">
@@ -68,20 +93,21 @@
                 </figure>
             </div>
             <div class="card-content">
-                <a><strong>Burgersss</strong></a>
+                <a> Burgersss</a>
             </div>
         </div>
 
         <div class="card" id="card2">
 
-            <div class="card-image">
+            <div class="card-image"> 
+            <div class="shadow p-3 mb-5 bg-white rounded"</div>
                 <figure class=" image is-4by3">
-                    <img src="https://images.unsplash.com/photo-1559183533-ee5f4826d3db?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1613&q=80"
+                    <img src="https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60"
                         alt="Placeholder image" id="pizzaPicture">
                 </figure>
             </div>
             <div class="card-content">
-                <a><strong>Pizzzzzzzaaa</strong></a>
+                <a>Pizzzzzzzaaa</a>
             </div>
         </div>
 
@@ -89,12 +115,12 @@
 
             <div class="card-image">
                 <figure class="image is-4by3">
-                    <img src="https://images.unsplash.com/photo-1448043552756-e747b7a2b2b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1549&q=80"
+                    <img src="https://images.unsplash.com/photo-1569494315581-abddb8d41cfe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
                         alt="Placeholder image" id="seafoodPicture">
                 </figure>
             </div>
             <div class="card-content">
-                <a><strong>SeaFood!</strong></a>
+                <a>SeaFood!</a>
             </div>
         </div>
 
@@ -102,13 +128,12 @@
 
             <div class="card-image">
                 <figure class="image is-4by3">
-                    <img src="https://images.unsplash.com/photo-1588348141545-dfb22824ced3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+                    <img src="https://images.unsplash.com/photo-1508615263227-c5d58c1e5821?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
                         alt="Placeholder image" id="bbqPicture">
                 </figure>
             </div>
             <div class="card-content">
-                <a><strong>BBQ!</strong></a>
-                <p>So good make you wanna slap yo momma!</p>
+                <a>BBQ! So good make you wanna slap yo momma!</a>
             </div>
         </div>
 
@@ -116,12 +141,12 @@
 
             <div class="card-image">
                 <figure class="image is-4by3">
-                    <img src="https://images.unsplash.com/photo-1561296953-ac366f34b9d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80"
+                    <img src="https://images.unsplash.com/photo-1506280754576-f6fa8a873550?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
                         id="italianPicture">
                 </figure>
             </div>
             <div class="card-content">
-            <a><strong>Pasta and Magic</strong></a></div>
+            <a>Italian</a></div>
         </div>
 
         <div class="card" id="card6">
@@ -132,20 +157,29 @@
                 </figure>
             </div>
             <div class="card-content">
-                <a><strong>RANDOM WOWOWOW</strong></a>
+                <a>RANDOM WOWOWOW</a>
             </div>
         </div>
 
     </div>
-    
-    <div class="restaurant-overlay"
-                <form>
-                    <input type="submit">
-                    <p class="close-modal-x" id="close-modal">Close</p>
-                </form>>
-            <div class="container bg-img" id="restaurantContainer">
-            </div>
+
+
+    <div class="restaurant-overlay">
+
+        <div class="container bg-img" id="restaurantContainer">
+            <!-- <h1 class="text">The input placeholder attribute</h1>
+            <p class="p-text">This is a paragraph.</p>
+            <div class=""></div>
+            <div class="input-text">
+                <input type="" id="" name="" placeholder="">
+                <input type="submit"></div> -->
+        </div>
+        <p class="close-modal-x" id="close-modal">Close</p>
     </div>
+
+
+
+
 </body>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
